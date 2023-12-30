@@ -20,14 +20,14 @@ public class NavigationMenu extends BasePage {
   }
 
   public void openResearchEducationMenu() throws InterruptedException {
-    Waits.waitForElementVisibility(researchEducationMenuItem, 5L, driver);
-    Waits.waitForElementToBeClickable(researchEducationMenuItem, 5L, driver);
+    Waits.waitForElementToBeClickable(researchEducationMenuItem, TIMEOUT, driver);
+    //sleep needed because of additional reload
     Thread.sleep(1000);
     researchEducationMenuItem.click();
   }
 
   public EconomicCalendarPage openEconomicCalendarPage() {
-    Waits.waitForElementVisibility(economicCalendarMenuItem, 5L, driver);
+    Waits.waitForElementVisibility(economicCalendarMenuItem, TIMEOUT, driver);
     economicCalendarMenuItem.click();
     return PageFactory.initElements(driver, EconomicCalendarPage.class);
   }

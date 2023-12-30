@@ -23,13 +23,8 @@ public class Waits {
     wait.until(ExpectedConditions.elementToBeClickable(element));
   }
 
-  public static void waitForElementInVisibility(WebElement element, long seconds, WebDriver driver) {
+  public static void waitForElementInvisibility(WebElement element, long seconds, WebDriver driver) {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
     wait.until(ExpectedConditions.invisibilityOf(element));
-  }
-
-  public static void waitForElementAttributeContains(WebElement element, String attribute, String value, long seconds, WebDriver driver) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-    wait.until(ExpectedConditions.attributeContains(element, attribute, value));
   }
 }

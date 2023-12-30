@@ -7,13 +7,17 @@ import java.time.format.DateTimeFormatter;
 import static java.time.temporal.TemporalAdjusters.next;
 
 public class DateUtils {
-  private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MMM dd");
+  private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy MMM dd");
 
   private DateUtils() {
   }
 
   public static String getTodayDate() {
     return LocalDateTime.now().format(formatter);
+  }
+
+  public static LocalDateTime getCurrentTime() {
+    return LocalDateTime.now();
   }
 
   public static String getTomorrowDate() {

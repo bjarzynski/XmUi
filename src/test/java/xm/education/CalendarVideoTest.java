@@ -17,7 +17,7 @@ public class CalendarVideoTest extends TestBase {
     homePage.acceptCookies();
     homePage.getNavigationMenu().openResearchEducationMenu();
     EconomicCalendarPage economicCalendarPage = homePage.getNavigationMenu().openEconomicCalendarPage();
-    /*economicCalendarPage.switchToBodyFrame();
+    economicCalendarPage.switchToBodyFrame();
     economicCalendarPage.moveRightSlider();
     assertThat(economicCalendarPage.getCalendarLabelTxt(), is("Today"));
     assertThat(economicCalendarPage.getDateTitle(), is(DateUtils.getTodayDate()));
@@ -28,12 +28,10 @@ public class CalendarVideoTest extends TestBase {
     economicCalendarPage.moveRightSlider();
     assertThat(economicCalendarPage.getCalendarLabelTxt(), is("Next Week"));
     assertThat(economicCalendarPage.getDateTitle(), is(DateUtils.getFirstDayOfNextWeekDate()));
-    economicCalendarPage.switchToMainFrame();*/
-    Thread.sleep(1000);
+    economicCalendarPage.switchToMainFrame();
     homePage.getNavigationMenu().openResearchEducationMenu();
     EducationalVideosPage educationalVideosPage = homePage.getNavigationMenu().openEducationalVideos();
     educationalVideosPage.openPlaylistGroup("Intro to the Markets");
-    Thread.sleep(3000);
     educationalVideosPage.openLesson("1.1");
     educationalVideosPage.clickVideoPlayer();
     educationalVideosPage.wait5secIfVideoIsPlaying();

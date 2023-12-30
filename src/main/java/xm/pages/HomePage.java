@@ -23,9 +23,9 @@ public class HomePage extends BasePage {
   }
 
   public void acceptCookies() {
-    Waits.waitForElementToBeClickable(acceptCookiesBtn, 5L, driver);
+    Waits.waitForElementToBeClickable(acceptCookiesBtn, TIMEOUT, driver);
     acceptCookiesBtn.click();
-    Waits.waitForElementInVisibility(acceptCookiesBtn, 5L, driver);
+    Waits.waitForElementInvisibility(acceptCookiesBtn, TIMEOUT, driver);
   }
 }
 
